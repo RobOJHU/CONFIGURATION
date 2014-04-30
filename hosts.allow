@@ -1,0 +1,17 @@
+#####################################################################
+# hosts.allow   This file contains access rules which are used to
+#               allow or deny connections to network services that
+#               either use the tcp_wrappers library or that have been
+#               started through a tcp_wrappers-enabled xinetd.
+######### PRECIDENCE between Hosts.Allow  and Hosts.deny
+##If the address is listed in the hosts.allow file, the connection is allowed and hosts.deny is not checked.
+##If the address is not matched in hosts.allow, but is in hosts.deny, the connection is denied.
+##If the address is in neither file, the connection is allowed.# you should know that NFS uses portmap!
+#
+#
+#  LET the SYS ADMIN first AND allow our IP , NRPE , Sendmail
+
+sshd: 128.220.106.0/255.255.255.0 10.171.1.0/255.255.255.0 10.171.62.0/255.255.255.0 10.160.161.72 10.171.63.0/255.255.255.0
+nrpe: 127.0.0.1 128.220.106.17
+sendmail: 127.0.0.1
+
