@@ -11,8 +11,9 @@
 ####### PRECIDENCE between Hosts.Allow  and Hosts.deny
 #If the address is listed in the hosts.allow file, the connection is allowed and hosts.deny is not checked.
 #If the address is not matched in hosts.allow, but is in hosts.deny, the connection is denied.
-#If the address is in neither file, the connection is allowed.# you should know that NFS uses portmap!
+#If the address is in neither file, the connection is allowed.
+# you should know that NFS uses portmap!
 # --RobO
 
-
+# We allowed ourselves in the .allow file --so DENY ALL here 
 ALL : ALL
